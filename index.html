@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iman opa VSL</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; } body { overflow-x: hidden; background-color: #030117; position: relative; padding-bottom: 75px; } html { overflow-x: hidden; } .hero__container { max-width: 490px; width: 100%; padding-left: 20px; padding-right: 20px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; padding-top: 20px; font-family: sans-serif; position: relative; } .container { max-width: 490px; width: 100%; padding-left: 20px; padding-right: 20px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; } .VSL_logo { font-family: Kuunari, sans-serif; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; margin-bottom: 6px; } .hero__top { margin-bottom: 19px; display: flex; align-items: center; color: white; justify-content: space-between; max-width: 450px; width: 100%; } .hero__top__title { font-family: Kalnia; font-weight: 400; font-size: 24px; line-height: 100%; text-transform: uppercase; } .hero__top__text { font-family: Poppins, sans-serif; font-weight: 300; font-size: 11px; line-height: 100%; text-align: right; max-width: 135px; width: 100%; } .VSL_title { font-family: Impact; font-weight: 400; font-size: clamp(20px, 7vw, 36px); line-height: 100%; text-align: center; text-transform: uppercase; margin-bottom: 23px; color: white; span { background: linear-gradient(90deg, #DFCEFF 0.96%, #AE63FF 98.08%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } } .VSL_logo, .VSL_title, .free_textbook, .video_arrow, .timer_info, .timer, .signUp_info, .registrationForm { position: relative; z-index: 30; } .video_arrow { margin-bottom: 7px; margin-top: 6px; } .videoShadow { position: absolute; width: 793px; height: 569px; background: linear-gradient(103.13deg, #2388FF 16.25%, rgba(35, 136, 255, 0) 123.93%); filter: blur(168px); transform: rotate(19.72deg); top: -272px; left: -293px; } .videoShadow_white { width: 488px; height: 348px; background-color: #FAFAFA; filter: blur(114.19999694824219px); top: -0.58px; left: -54.28px; position: absolute; } .timer_info { font-weight: 500; font-style: italic; font-size: 14px; line-height: 100%; text-align: center; margin-bottom: 40px; color: white; } .timer { font-family: Kuunari, sans-serif; font-weight: 700; font-size: 26px; margin-top: 15px; } .signUp_info { max-width: 341px; border-radius: 15px; text-align: center; color: white; font-family: Impact; font-weight: 400; font-size: clamp(24px, 6vw, 30px); line-height: 130%; text-transform: uppercase; margin-bottom: 15px; } .registrationForm { width: 100%; margin-bottom: 15px; } .speaker_img { width: 100%; height: auto; object-fit: contain; position: relative; z-index: 20; } .bottom_shaodow { width: 100%; height: 408px; bottom: -204px; position: absolute; filter: blur(200px); background-color: #2f72f5; } .homeFormErrorText { color: #e53e3e; margin-bottom: 12px; font-size: 14px; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding-top: 5px; padding-bottom: 5px; } .HomeFormRowInput, .HomeFormRowLabel { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; } .homeForm-label { font-size: 14px; line-height: 100%; font-weight: 400; font-family: sans-serif; margin-bottom: 4px; color: white; } .HomeFormRow { margin-bottom: 15px; margin-top: 6px; } .HomeFormRowLabel { display: block; margin-bottom: 6px; color: #000; } .HomeFormRowInput { width: 100%; padding: 10px 16px; background-color: white; border: 1.5px solid #828282; min-height: 40px; border-radius: 10px; font-weight: 400; outline: 0; height: 50px; transition: border-color 0.2s; } .HomeFormRowInput:focus { border-color: #828282; } .HomeFormRowInput::placeholder { color: #aaa; } #registrationForm2 { border: 1px solid #9C9AA8; background-color: #191919; border-radius: 24px; padding: 20px 30px; } .HomeFormBtn { margin-left: auto; margin-right: auto; cursor: pointer; border-radius: 50px; background: linear-gradient(93.75deg, #8949FF 3.69%, #A97AFF 31.81%, #8949FF 60.87%, #A97AFF 87.08%, #8949FF 102.8%); transition: 0.3s; box-shadow: 0px 5px 0px 0px #683CB9; font-weight: 700; font-size: 26px; line-height: 150%; color: white; border: none; position: relative; display: flex; align-items: center; justify-content: center; font-family: Involve, sans-serif; padding: 18px 55px; transition: all 0.3s; cursor: pointer; position: relative; margin-bottom: 30px; } .HomeFormBtn__arrow { position: absolute; left: 30px; top: 50%; transform: translateY(-50%); } .HomeFormBtn:disabled { cursor: not-allowed; opacity: 70%; background: linear-gradient(90deg, #3476f5 0%, #81a7ef 48.56%, #3476f5 96.63%); } .phone-input-container { display: flex; align-items: center; position: relative; margin-top: 6px; } .country-selector { margin-right: 10px; } .selected-country { display: flex; align-items: center; padding: 10px; border: 1px solid #2b2b2b80; border-radius: 6px; background-color: transparent; cursor: pointer; min-height: 50px; font-family: sans-serif !important; font-weight: 400 !important; } .country-dropdown { position: absolute; margin-top: 10px; top: 100%; left: 0; width: 100%; background-color: transparent; border: 1px solid #2B2B2B80; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); z-index: 40; max-height: 200px; overflow-y: auto; font-family: sans-serif !important; font-weight: 400 !important; } .country-option { display: flex; align-items: center; padding: 10px; cursor: pointer; font-family: sans-serif; font-weight: 400 !important; background-color: #fff; } .country-option:hover { background-color: #f3f7f8; } .country-option.selected { background-color: #e6f0fa; } .country-code { margin-left: auto; margin-right: 10px; } .swiper { width: 100%; height: 100%; padding-bottom: 15px !important; } @media (max-width:440px) { .HomeFormBtn { font-size: 24px; border-radius: 30px; padding: 15px 27px; } } @media (max-width:360px) { .HomeFormBtn { font-size: 22px; border-radius: 20px; padding: 15px; } }
+    </style>
+    <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="./css/main.css">
+    </noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </noscript>
+    <link rel="preconnect" href="https://fast.vidalytics.com">
+</head>
+
+<body>
+    <!-- hero start -->
+    <div class="sec">
+        <div class="hero__container">
+
+            <div class="hero__top">
+
+                <h3 class="hero__top__title">iman <br>
+                    ahmedova</h3>
+
+
+                <p class="hero__top__text">Yillab olgan bilimlarimni 3 kunlik vebinarimda bo’lishaman</p>
+            </div>
+            <h1 class="VSL_title">3 oyda <span>istalgan orzuyingizga</span> “Niyatlar ilmi” bilan erishing</h1>
+
+
+            <div id="vidalytics_embed_TrmmVnyHPidbbLS9"
+                style="width: 100%; position:relative; padding-top: 46%; border: 1px solid #8949FF; box-shadow: 0px 6px 30px 0px #8949FF80;">
+            </div>
+
+            <img src="./images/hero/arrows.avif" alt="kompaniya logosi" width="48" height="84" loading="lazy"
+                decoding="async" class="video_arrow">
+            <p class="timer_info">Kursimiz haqida ma’lumot</span></p>
+            <!-- <p class="timer">24:00:00</p> -->
+            <form id="registrationForm2" name="contact-form registrationForm">
+
+                <p class="signUp_info">
+                    Kursga qatnashish uchun ro'yxatdan o'ting:
+                </p>
+
+                <label for="name2" class="homeForm-label">Ismingizni kiriting:</label>
+                <div class="HomeFormRow mb-2">
+                    <input class="HomeFormRowInput" placeholder="Ismingiz" type="text" id="name2"
+                        style="padding-left: 15px;" />
+                    <p class="homeFormErrorText" id="nameError2" style="display: none">
+                        Iltimos, ismingizni kiriting
+                    </p>
+                </div>
+                <div class="HomeFormRow mb-3">
+                    <label class="homeForm-label">Telefon raqamingiz:</label>
+                    <div class="phone-input-container">
+                        <div class="country-selector">
+                            <div class="selected-country" id="selectedCountry2" style=" border-radius: 10px">
+                                <span id="selectedCountryCode2"></span>
+                                <svg id="dropdownIcon2" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="country-dropdown" id="countryDropdown2" style="display: none"></div>
+                        <input class="HomeFormRowInput tel" type="tel" id="phone2" name="phone"
+                            placeholder="00 000-00-00" style="border-radius: 10px" />
+                    </div>
+                    <p class="homeFormErrorText" id="phoneError2" style="display: none">
+                        ❌ Telefon raqam mos emas!
+                    </p>
+                </div>
+                <div id="errorMessage2" class="homeFormErrorText"
+                    style="display: none; color: red; margin-bottom: 10px">
+                    Xatolik yuz berdi, qayta urinib ko'ring.
+                </div>
+                <button class="HomeFormBtn" id="submitBtn2" style="margin-bottom: 10px;">
+                    Ro’yxatdan o’tish
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- teacher start -->
+    <section class="teacher section">
+        <div class="container teacher__container">
+            <h2 class="title">Ustozingiz kim?</h2>
+            <img src="./images/teacher/teacher-name.avif" loading="lazy" alt="teacher name">
+
+            <div class="teacher__center">
+                <img src="./images/teacher/speaker.avif" class="teacher__center__img" decoding="async" loading="lazy"
+                    alt="speaker rasmi">
+
+                <div class="teacher__center__box">
+                    <div class="teacher__center__item">
+                        <h3 class="teacher__center__title">Oliy ma’lumotli</h3>
+                        <p class="teacher__center__text">Psixolog Expert</p>
+                        <h3 class="teacher__center__title">Shaxsiy natija:</h3>
+                        <p class="teacher__center__text">20.000$ qarzdan 4 oy ichida, oson va tez qutilish</p>
+                    </div>
+                    <div class="teacher__center__item" style="padding-bottom: 12.5px;">
+                        <h3 class="teacher__center__title">Mijozlar natijasi:</h3>
+                        <p class="teacher__center__text" style="font-weight: 500; white-space: nowrap;">- 27 kunda
+                            10.000$ qarzdan qutilish</p>
+                        <p class="teacher__center__text" style="font-weight: 500; white-space: nowrap;">- 21 kunda 2
+                            qavatli uy olish </p>
+                        <p class="teacher__center__text" style="font-weight: 500;">- 10.000 dan ortiq turmush qurish va
+                            tiklanish holatlari</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="gradients__box">
+                <div class="gradients"></div>
+            </div>
+
+            <button class="HomeFormBtn registerBtns">
+                Kursga qatnashish
+            </button>
+        </div>
+    </section>
+    <!-- teacher end -->
+
+
+    <!-- course start -->
+    <section class="course section">
+        <div class="container">
+            <h2 class="title">Kursda nimalarni o'rganasiz?</h2>
+
+            <div class="course__col">
+                <div class="course__col__card">
+                    <img loading="lazy" decoding="async" src="./images/course/after.avif" alt="course__img"
+                        class="course__col__card__img">
+                    <h3 class="course__col__card__title">Oldingi siz:</h3>
+                    <ul class="course__col__card__list">
+                        <li class="course__col__card__list__item">Tinimsiz duolar, ibodatlar qilasiz lekin <span>natija
+                                yo’q</span></li>
+                        <li class="course__col__card__list__item">Maqsadlariz, <span>ibodatlaringizga dangasasiz</span>,
+                            <br> bir ishni ohirigacha yetkaza olmaysiz
+                        </li>
+                        <li class="course__col__card__list__item">Muammoni hal qilish uchun kurslar, <br> kitoblar
+                            o’qiysiz <span>natijalar esa vaqtinchalik</span>
+                        </li>
+                        <li class="course__col__card__list__item">Doimiy <span>yomon hayollardan qiynalasiz,</span> <br>
+                            o’zingizga nisbatan ishonchingiz past</li>
+                    </ul>
+                </div>
+                <div class="course__col__card">
+                    <img loading="lazy" decoding="async" src="./images/course/before.avif" alt="course__img"
+                        class="course__col__card__img">
+                    <h3 class="course__col__card__title">Kursdan keyingi siz:</h3>
+                    <ul class="course__col__card__list">
+                        <li class="course__col__card__list__item">Istalgan duolaringiz <span>tez va oson</span> ijobat
+                            bo’ladi</li>
+                        <li class="course__col__card__list__item">Har qanday <span>ishni bosimsiz,</span> dangasaliksiz
+                            <br> qilasiz va ohirigacha yetkazasiz
+                        </li>
+                        <li class="course__col__card__list__item">Siz xohlagan <span>munosabat</span> va
+                            <span>puldagi</span> <br> natijalar davomiy bo’ladi
+                        </li>
+                        <li class="course__col__card__list__item">Yomon hayollarsiz, <span>huzur halovatda</span> <br>
+                            hotirjam yashaysiz</li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- course end -->
+
+    <!-- coments start -->
+    <section class="section">
+        <div class="all_results__container container">
+            <div class="all__results__box">
+                <h2 class="titles" style="margin-bottom: 20px; white-space: nowrap;">O'quvchilarim fikrlari</h2>
+                <div class="swiper_buttons container">
+                    <div class="swiper-button-prev3 swiper-button">
+                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect x="7" y="10.4412" width="7" height="9.88235" transform="rotate(180 7 10.4412)"
+                                fill="url(#pattern0_38_34)" />
+                            <defs>
+                                <pattern id="pattern0_38_34" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_38_34"
+                                        transform="translate(-0.176471) scale(0.00551471 0.00390625)" />
+                                </pattern>
+                                <image id="image0_38_34" width="256" height="256" preserveAspectRatio="none"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg>
+
+                    </div>
+                    <div class="swiper-button-next3 swiper-button">
+                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect y="0.558838" width="7" height="9.88235" fill="url(#pattern0_38_36)" />
+                            <defs>
+                                <pattern id="pattern0_38_36" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_38_36"
+                                        transform="translate(-0.176471) scale(0.00551471 0.00390625)" />
+                                </pattern>
+                                <image id="image0_38_36" width="256" height="256" preserveAspectRatio="none"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper" style="margin-bottom: 38px;">
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/1.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/2.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/3.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/4.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/5.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/6.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/7.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/8.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/9.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/10.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/11.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+               
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/12.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="HomeFormBtn registerBtns">
+                    Kursga qatnashish
+                </button>
+
+            </div>
+        </div>
+    </section>
+    <!-- coments end -->
+
+    <!-- Vidio start -->
+
+    <section class="results">
+        <div class="results__container container">
+            <h2 class="title" style="margin-bottom: 25px; white-space: nowrap;">Real video natijalar</h2>
+
+            <div class="results__row">
+                <!-- 1-video -->
+                <div
+                  class="results__col"
+                  data-video="https://www.youtube.com/embed/1nPi_r5z_Mk"
+                >
+                  <div class="results__images">
+                    <img src="./images/play.png" alt="play icon">
+                  </div>
+              
+                  <div class="coments__infos">
+                    <p class="coments__info__title">21 kunda yangi uylik bo’lganlar</p>
+                  </div>
+                </div>
+              
+                <!-- 2-video -->
+                <div
+                  class="results__col"
+                  data-video="https://www.youtube.com/embed/VIDEO_ID_2"
+                >
+                  <div class="results__images">
+                    <img src="./images/play.png" alt="play icon">
+                  </div>
+              
+                </div>
+              
+                <!-- 3-video -->
+                <div
+                  class="results__col"
+                  data-video="https://www.youtube.com/embed/VIDEO_ID_3"
+                >
+                  <div class="results__images">
+                    <img src="./images/play.png" alt="play icon">
+                  </div>
+              
+                 
+                </div>
+              
+                <!-- 4-video -->
+                <div
+                  class="results__col"
+                  data-video="https://www.youtube.com/embed/VIDEO_ID_4"
+                >
+                  <div class="results__images">
+                    <img src="./images/play.png" alt="play icon">
+                  </div>
+              
+             
+                </div>
+              </div>
+              
+
+        </div>
+    </section>
+
+
+    <!-- Vidio end -->
+    <!-- Modal -->
+    <div id="registrationModal" class="homeModal" style="display: none">
+        <div class="homeModalOverlay"></div>
+        <div class="homeFormContainer">
+            <button class="closeButton" id="closeModalBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M1 1.00001L11 11" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="homeFormTop">
+                <h1 class="homeFormTopTitle">
+                    Davom etish uchun <br> ma'lumotlaringizni kiriting
+                </h1>
+            </div>
+            <form id="registrationForm" name="contact-form registrationForm">
+                <div class="HomeFormRow mb-2">
+                    <label class="HomeFormRowLabel" for="name">Ismingizni</label>
+                    <input class="HomeFormRowInput" type="text" id="name" name="name" />
+                    <p class="homeFormErrorText" id="nameError" style="display: none">
+                        Iltimos, ismingizni kiriting
+                    </p>
+                </div>
+                <div class="HomeFormRow mb-3">
+                    <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz</label>
+                    <div class="phone-input-container">
+                        <div class="country-selector">
+                            <div class="selected-country" id="selectedCountry" style=" border-radius: 10px">
+                                <span id="selectedCountryCode">🇺🇿</span>
+                                <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="country-dropdown" id="countryDropdown" style="display: none"></div>
+                        <input class="HomeFormRowInput tel" type="tel" id="phone" name="phone"
+                            placeholder="+998 88 888 88 88" style="border-radius: 10px" />
+                    </div>
+                    <p class="homeFormErrorText" id="phoneError" style="display: none">
+                        ❌ Telefon raqam mos emas!
+                    </p>
+                </div>
+                <div id="errorMessage" class="homeFormErrorText" style="display: none; color: red; margin-bottom: 10px">
+                    Xatolik yuz berdi, qayta urinib ko'ring.
+                </div>
+                <button type="submit" class="HomeFormBtn" id="submitBtn"
+                    style="padding-left: 0; height: 50px; width: 100%;padding-right: 0;">
+                    DAVOM ETISH
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Lazy html -->
+    <div class="lazyHTML"></div>
+
+    <section class="botom">
+        <div class="bottom__container">
+            <p class="bottom__text">24 soatdan so'ng qabul yopiladi:</p>
+            <p class="bottom_timer">00:00:00</p>
+        </div>
+    </section>
+
+
+
+    <!-- Swiper JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- main js -->
+    <script defer src="./js/app.js"></script>
+    <!-- modal js -->
+    <script defer src="./js/modal.js"></script>
+
+
+
+    <!-- Video script start -->
+    <script defer type="text/javascript">
+        (function (v, i, d, a, l, y, t, c, s) {
+            y = '_' + d.toLowerCase(); c = d + 'L'; if (!v[d]) { v[d] = {}; } if (!v[c]) { v[c] = {}; } if (!v[y]) { v[y] = {}; } var vl = 'Loader', vli = v[y][vl], vsl = v[c][vl + 'Script'], vlf = v[c][vl + 'Loaded'], ve = 'Embed';
+            if (!vsl) {
+                vsl = function (u, cb) {
+                    if (t) { cb(); return; } s = i.createElement("script"); s.type = "text/javascript"; s.async = 1; s.src = u;
+                    if (s.readyState) { s.onreadystatechange = function () { if (s.readyState === "loaded" || s.readyState == "complete") { s.onreadystatechange = null; vlf = 1; cb(); } }; } else { s.onload = function () { vlf = 1; cb(); }; }
+                    i.getElementsByTagName("head")[0].appendChild(s);
+                };
+            }
+            vsl(l + 'loader.min.js', function () { if (!vli) { var vlc = v[c][vl]; vli = new vlc(); } vli.loadScript(l + 'player.min.js', function () { var vec = v[d][ve]; t = new vec(); t.run(a); }); });
+        })(window, document, 'Vidalytics', 'vidalytics_embed_TrmmVnyHPidbbLS9', 'https://fast.vidalytics.com/embeds/AJ0OE7px/TrmmVnyHPidbbLS9/');
+    </script>
+    <!-- Video script end -->
+</body>
+
+</html>
