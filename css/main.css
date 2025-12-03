@@ -491,14 +491,6 @@ button {
 }
 
 
-.results {
-    padding-bottom: 30px;
-}
-
-.results__container {}
-
-.container {}
-
 .results__row {
     display: flex;
     flex-direction: column;

@@ -6,7 +6,409 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iman opa VSL</title>
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; } body { overflow-x: hidden; background-color: #030117; position: relative; padding-bottom: 75px; } html { overflow-x: hidden; } .hero__container { max-width: 490px; width: 100%; padding-left: 20px; padding-right: 20px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; padding-top: 20px; font-family: sans-serif; position: relative; } .container { max-width: 490px; width: 100%; padding-left: 20px; padding-right: 20px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; } .VSL_logo { font-family: Kuunari, sans-serif; font-weight: 500; font-size: 18px; line-height: 100%; text-align: center; margin-bottom: 6px; } .hero__top { margin-bottom: 19px; display: flex; align-items: center; color: white; justify-content: space-between; max-width: 450px; width: 100%; } .hero__top__title { font-family: Kalnia; font-weight: 400; font-size: 24px; line-height: 100%; text-transform: uppercase; } .hero__top__text { font-family: Poppins, sans-serif; font-weight: 300; font-size: 11px; line-height: 100%; text-align: right; max-width: 135px; width: 100%; } .VSL_title { font-family: Impact; font-weight: 400; font-size: clamp(20px, 7vw, 36px); line-height: 100%; text-align: center; text-transform: uppercase; margin-bottom: 23px; color: white; span { background: linear-gradient(90deg, #DFCEFF 0.96%, #AE63FF 98.08%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } } .VSL_logo, .VSL_title, .free_textbook, .video_arrow, .timer_info, .timer, .signUp_info, .registrationForm { position: relative; z-index: 30; } .video_arrow { margin-bottom: 7px; margin-top: 6px; } .videoShadow { position: absolute; width: 793px; height: 569px; background: linear-gradient(103.13deg, #2388FF 16.25%, rgba(35, 136, 255, 0) 123.93%); filter: blur(168px); transform: rotate(19.72deg); top: -272px; left: -293px; } .videoShadow_white { width: 488px; height: 348px; background-color: #FAFAFA; filter: blur(114.19999694824219px); top: -0.58px; left: -54.28px; position: absolute; } .timer_info { font-weight: 500; font-style: italic; font-size: 14px; line-height: 100%; text-align: center; margin-bottom: 40px; color: white; } .timer { font-family: Kuunari, sans-serif; font-weight: 700; font-size: 26px; margin-top: 15px; } .signUp_info { max-width: 341px; border-radius: 15px; text-align: center; color: white; font-family: Impact; font-weight: 400; font-size: clamp(24px, 6vw, 30px); line-height: 130%; text-transform: uppercase; margin-bottom: 15px; } .registrationForm { width: 100%; margin-bottom: 15px; } .speaker_img { width: 100%; height: auto; object-fit: contain; position: relative; z-index: 20; } .bottom_shaodow { width: 100%; height: 408px; bottom: -204px; position: absolute; filter: blur(200px); background-color: #2f72f5; } .homeFormErrorText { color: #e53e3e; margin-bottom: 12px; font-size: 14px; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding-top: 5px; padding-bottom: 5px; } .HomeFormRowInput, .HomeFormRowLabel { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; } .homeForm-label { font-size: 14px; line-height: 100%; font-weight: 400; font-family: sans-serif; margin-bottom: 4px; color: white; } .HomeFormRow { margin-bottom: 15px; margin-top: 6px; } .HomeFormRowLabel { display: block; margin-bottom: 6px; color: #000; } .HomeFormRowInput { width: 100%; padding: 10px 16px; background-color: white; border: 1.5px solid #828282; min-height: 40px; border-radius: 10px; font-weight: 400; outline: 0; height: 50px; transition: border-color 0.2s; } .HomeFormRowInput:focus { border-color: #828282; } .HomeFormRowInput::placeholder { color: #aaa; } #registrationForm2 { border: 1px solid #9C9AA8; background-color: #191919; border-radius: 24px; padding: 20px 30px; } .HomeFormBtn { margin-left: auto; margin-right: auto; cursor: pointer; border-radius: 50px; background: linear-gradient(93.75deg, #8949FF 3.69%, #A97AFF 31.81%, #8949FF 60.87%, #A97AFF 87.08%, #8949FF 102.8%); transition: 0.3s; box-shadow: 0px 5px 0px 0px #683CB9; font-weight: 700; font-size: 26px; line-height: 150%; color: white; border: none; position: relative; display: flex; align-items: center; justify-content: center; font-family: Involve, sans-serif; padding: 18px 55px; transition: all 0.3s; cursor: pointer; position: relative; margin-bottom: 30px; } .HomeFormBtn__arrow { position: absolute; left: 30px; top: 50%; transform: translateY(-50%); } .HomeFormBtn:disabled { cursor: not-allowed; opacity: 70%; background: linear-gradient(90deg, #3476f5 0%, #81a7ef 48.56%, #3476f5 96.63%); } .phone-input-container { display: flex; align-items: center; position: relative; margin-top: 6px; } .country-selector { margin-right: 10px; } .selected-country { display: flex; align-items: center; padding: 10px; border: 1px solid #2b2b2b80; border-radius: 6px; background-color: transparent; cursor: pointer; min-height: 50px; font-family: sans-serif !important; font-weight: 400 !important; } .country-dropdown { position: absolute; margin-top: 10px; top: 100%; left: 0; width: 100%; background-color: transparent; border: 1px solid #2B2B2B80; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); z-index: 40; max-height: 200px; overflow-y: auto; font-family: sans-serif !important; font-weight: 400 !important; } .country-option { display: flex; align-items: center; padding: 10px; cursor: pointer; font-family: sans-serif; font-weight: 400 !important; background-color: #fff; } .country-option:hover { background-color: #f3f7f8; } .country-option.selected { background-color: #e6f0fa; } .country-code { margin-left: auto; margin-right: 10px; } .swiper { width: 100%; height: 100%; padding-bottom: 15px !important; } @media (max-width:440px) { .HomeFormBtn { font-size: 24px; border-radius: 30px; padding: 15px 27px; } } @media (max-width:360px) { .HomeFormBtn { font-size: 22px; border-radius: 20px; padding: 15px; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #030117;
+            position: relative;
+            padding-bottom: 75px;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .hero__container {
+            max-width: 490px;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        .container {
+            max-width: 490px;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .VSL_logo {
+            font-family: Kuunari, sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 100%;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .hero__top {
+            margin-bottom: 19px;
+            display: flex;
+            align-items: center;
+            color: white;
+            justify-content: space-between;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .hero__top__title {
+            font-family: Kalnia;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            text-transform: uppercase;
+        }
+
+        .hero__top__text {
+            font-family: Poppins, sans-serif;
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 100%;
+            text-align: right;
+            max-width: 135px;
+            width: 100%;
+        }
+
+        .VSL_title {
+            font-family: Impact;
+            font-weight: 400;
+            font-size: clamp(20px, 7vw, 36px);
+            line-height: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 23px;
+            color: white;
+
+            span {
+                background: linear-gradient(90deg, #DFCEFF 0.96%, #AE63FF 98.08%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .VSL_logo,
+        .VSL_title,
+        .free_textbook,
+        .video_arrow,
+        .timer_info,
+        .timer,
+        .signUp_info,
+        .registrationForm {
+            position: relative;
+            z-index: 30;
+        }
+
+        .video_arrow {
+            margin-bottom: 7px;
+            margin-top: 6px;
+        }
+
+        .videoShadow {
+            position: absolute;
+            width: 793px;
+            height: 569px;
+            background: linear-gradient(103.13deg, #2388FF 16.25%, rgba(35, 136, 255, 0) 123.93%);
+            filter: blur(168px);
+            transform: rotate(19.72deg);
+            top: -272px;
+            left: -293px;
+        }
+
+        .videoShadow_white {
+            width: 488px;
+            height: 348px;
+            background-color: #FAFAFA;
+            filter: blur(114.19999694824219px);
+            top: -0.58px;
+            left: -54.28px;
+            position: absolute;
+        }
+
+        .timer_info {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 14px;
+            line-height: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .timer {
+            font-family: Kuunari, sans-serif;
+            font-weight: 700;
+            font-size: 26px;
+            margin-top: 15px;
+        }
+
+        .signUp_info {
+            max-width: 341px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            font-family: Impact;
+            font-weight: 400;
+            font-size: clamp(24px, 6vw, 30px);
+            line-height: 130%;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .registrationForm {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .speaker_img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            position: relative;
+            z-index: 20;
+        }
+
+        .bottom_shaodow {
+            width: 100%;
+            height: 408px;
+            bottom: -204px;
+            position: absolute;
+            filter: blur(200px);
+            background-color: #2f72f5;
+        }
+
+        .homeFormErrorText {
+            color: #e53e3e;
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .HomeFormRowInput,
+        .HomeFormRowLabel {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 16px;
+        }
+
+        .homeForm-label {
+            font-size: 14px;
+            line-height: 100%;
+            font-weight: 400;
+            font-family: sans-serif;
+            margin-bottom: 4px;
+            color: white;
+        }
+
+        .HomeFormRow {
+            margin-bottom: 15px;
+            margin-top: 6px;
+        }
+
+        .HomeFormRowLabel {
+            display: block;
+            margin-bottom: 6px;
+            color: #000;
+        }
+
+        .HomeFormRowInput {
+            width: 100%;
+            padding: 10px 16px;
+            background-color: white;
+            border: 1.5px solid #828282;
+            min-height: 40px;
+            border-radius: 10px;
+            font-weight: 400;
+            outline: 0;
+            height: 50px;
+            transition: border-color 0.2s;
+        }
+
+        .HomeFormRowInput:focus {
+            border-color: #828282;
+        }
+
+        .HomeFormRowInput::placeholder {
+            color: #aaa;
+        }
+
+        #registrationForm2 {
+            border: 1px solid #9C9AA8;
+            background-color: #191919;
+            border-radius: 24px;
+            padding: 20px 30px;
+        }
+
+        .HomeFormBtn {
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+            border-radius: 50px;
+            background: linear-gradient(93.75deg, #8949FF 3.69%, #A97AFF 31.81%, #8949FF 60.87%, #A97AFF 87.08%, #8949FF 102.8%);
+            transition: 0.3s;
+            box-shadow: 0px 5px 0px 0px #683CB9;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 150%;
+            color: white;
+            border: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Involve, sans-serif;
+            padding: 18px 55px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .HomeFormBtn__arrow {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .HomeFormBtn:disabled {
+            cursor: not-allowed;
+            opacity: 70%;
+            background: linear-gradient(90deg, #3476f5 0%, #81a7ef 48.56%, #3476f5 96.63%);
+        }
+
+        .phone-input-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-top: 6px;
+        }
+
+        .country-selector {
+            margin-right: 10px;
+        }
+
+        .selected-country {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #2b2b2b80;
+            border-radius: 6px;
+            background-color: transparent;
+            cursor: pointer;
+            min-height: 50px;
+            font-family: sans-serif !important;
+            font-weight: 400 !important;
+        }
+
+        .country-dropdown {
+            position: absolute;
+            margin-top: 10px;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid #2B2B2B80;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 40;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: sans-serif !important;
+            font-weight: 400 !important;
+        }
+
+        .country-option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-weight: 400 !important;
+            background-color: #fff;
+        }
+
+        .country-option:hover {
+            background-color: #f3f7f8;
+        }
+
+        .country-option.selected {
+            background-color: #e6f0fa;
+        }
+
+        .country-code {
+            margin-left: auto;
+            margin-right: 10px;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            padding-bottom: 15px !important;
+        }
+
+        @media (max-width:440px) {
+            .HomeFormBtn {
+                font-size: 24px;
+                border-radius: 30px;
+            }
+        }
+
+        @media (max-width:360px) {
+            .HomeFormBtn {
+                font-size: 22px;
+                border-radius: 20px;
+                padding: 20px;
+                max-width: 250px;
+                width: 100%;
+            }
+        }
+
+        wistia-player[media-id='j7be7sraqg']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/j7be7sraqg/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 174.12%;
+        }
+
+        wistia-player[media-id='llf8mh1tgp']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/llf8mh1tgp/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 174.12%;
+        }
+
+        wistia-player[media-id='38e438bewp']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/38e438bewp/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 174.12%;
+        }
+
+        wistia-player[media-id='d1b4y62mjr']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/d1b4y62mjr/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 174.12%;
+        }
     </style>
     <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'">
     <noscript>
@@ -17,7 +419,7 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     </noscript>
-    <link rel="preconnect" href="https://fast.vidalytics.com">
+
 </head>
 
 <body>
@@ -36,14 +438,20 @@
             <h1 class="VSL_title">3 oyda <span>istalgan orzuyingizga</span> “Niyatlar ilmi” bilan erishing</h1>
 
 
-            <div id="vidalytics_embed_TrmmVnyHPidbbLS9"
-                style="width: 100%; position:relative; padding-top: 46%; border: 1px solid #8949FF; box-shadow: 0px 6px 30px 0px #8949FF80;">
-            </div>
+
+            <style>
+                wistia-player[media-id='aquxo4cfrv']:not(:defined) {
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/aquxo4cfrv/swatch');
+                    display: block;
+                    filter: blur(5px);
+                    padding-top: 56.25%;
+                }
+            </style> <wistia-player media-id="aquxo4cfrv" aspect="1.7777777777777777"></wistia-player>
+
 
             <img src="./images/hero/arrows.avif" alt="kompaniya logosi" width="48" height="84" loading="lazy"
                 decoding="async" class="video_arrow">
             <p class="timer_info">Kursimiz haqida ma’lumot</span></p>
-            <!-- <p class="timer">24:00:00</p> -->
             <form id="registrationForm2" name="contact-form registrationForm">
 
                 <p class="signUp_info">
@@ -118,7 +526,7 @@
                             tiklanish holatlari</p>
                     </div>
                 </div>
-                
+
             </div>
             <div class="gradients__box">
                 <div class="gradients"></div>
@@ -300,7 +708,7 @@
                             <p class="coments__info__title">Daromadi oshganlar</p>
                         </div>
                     </div>
-               
+
                     <div class="swiper-slide">
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/12.avif"
                             alt="comment" class="coments__img">
@@ -326,57 +734,65 @@
             <h2 class="title" style="margin-bottom: 25px; white-space: nowrap;">Real video natijalar</h2>
 
             <div class="results__row">
-                <!-- 1-video -->
-                <div
-                  class="results__col"
-                  data-video="https://www.youtube.com/embed/1nPi_r5z_Mk"
-                >
-                  <div class="results__images">
-                    <img src="./images/play.png" alt="play icon">
-                  </div>
-              
-                  <div class="coments__infos">
-                    <p class="coments__info__title">21 kunda yangi uylik bo’lganlar</p>
-                  </div>
-                </div>
-              
-                <!-- 2-video -->
-                <div
-                  class="results__col"
-                  data-video="https://www.youtube.com/embed/VIDEO_ID_2"
-                >
-                  <div class="results__images">
-                    <img src="./images/play.png" alt="play icon">
-                  </div>
-              
-                </div>
-              
-                <!-- 3-video -->
-                <div
-                  class="results__col"
-                  data-video="https://www.youtube.com/embed/VIDEO_ID_3"
-                >
-                  <div class="results__images">
-                    <img src="./images/play.png" alt="play icon">
-                  </div>
-              
-                 
-                </div>
-              
-                <!-- 4-video -->
-                <div
-                  class="results__col"
-                  data-video="https://www.youtube.com/embed/VIDEO_ID_4"
-                >
-                  <div class="results__images">
-                    <img src="./images/play.png" alt="play icon">
-                  </div>
-              
-             
-                </div>
-              </div>
-              
 
+
+                <div class="results__col" >
+                    <wistia-player media-id="llf8mh1tgp" aspect="0.5743048897411314"></wistia-player>
+
+                    <div class="results__images">
+                        <img src="./images/play.png" loading="lazy" loading="lazy" alt="play icon">
+                    </div>
+
+                    <div class="coments__infos">
+                        <p class="coments__info__title">21 kunda yangi uylik bo’lganlar</p>
+                    </div>
+                </div>
+
+                <!-- 2-video -->
+                <div class="results__col" >
+                    <wistia-player media-id="j7be7sraqg" aspect="0.5743048897411314"></wistia-player>
+
+                    <div class="results__images">
+                        <img src="./images/play.png" loading="lazy" alt="play icon">
+                    </div>
+                    <div class="coments__infos">
+                        <p class="coments__info__title">Dardlariga shifo topganlar</p>
+                    </div>
+                </div>
+
+                <!-- 3-video -->
+                <div class="results__col" >
+                    <wistia-player media-id="38e438bewp" aspect="0.5743048897411314"></wistia-player>
+
+                    <div class="results__images">
+                        <img src="./images/play.png" loading="lazy" alt="play icon">
+                    </div>
+
+                    <div class="coments__infos">
+                        <p class="coments__info__title" style="font-size: 11px; padding: 6px;">Novostroykadan 10 yil
+                            kutilgan uylarini qisqa muddatda oldilar</p>
+                    </div>
+                </div>
+
+                <!-- 4-video -->
+                <div class="results__col">
+                    <wistia-player media-id="d1b4y62mjr" aspect="0.5743048897411314"></wistia-player>
+
+                    <div class="results__images">
+                        <img src="./images/play.png" loading="lazy" alt="play icon">
+                    </div>
+
+                    <div class="coments__infos">
+                        <p class="coments__info__title" style="font-size: 11px; padding: 6px;">Qarzlaridan 100% qutilgan
+                            va turmush o’rtog’i bilan yarashganlar</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="HomeFormBtn registerBtns" style="margin-top: 30px;">
+                Kursga qatnashish
+            </button>
         </div>
     </section>
 
@@ -447,31 +863,11 @@
     </section>
 
 
-
-    <!-- Swiper JS -->
+    <script defer src="https://fast.wistia.com/player.js" async></script>
+    <script defer src="https://fast.wistia.com/embed/aquxo4cfrv.js" async type="module"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- main js -->
     <script defer src="./js/app.js"></script>
-    <!-- modal js -->
     <script defer src="./js/modal.js"></script>
-
-
-
-    <!-- Video script start -->
-    <script defer type="text/javascript">
-        (function (v, i, d, a, l, y, t, c, s) {
-            y = '_' + d.toLowerCase(); c = d + 'L'; if (!v[d]) { v[d] = {}; } if (!v[c]) { v[c] = {}; } if (!v[y]) { v[y] = {}; } var vl = 'Loader', vli = v[y][vl], vsl = v[c][vl + 'Script'], vlf = v[c][vl + 'Loaded'], ve = 'Embed';
-            if (!vsl) {
-                vsl = function (u, cb) {
-                    if (t) { cb(); return; } s = i.createElement("script"); s.type = "text/javascript"; s.async = 1; s.src = u;
-                    if (s.readyState) { s.onreadystatechange = function () { if (s.readyState === "loaded" || s.readyState == "complete") { s.onreadystatechange = null; vlf = 1; cb(); } }; } else { s.onload = function () { vlf = 1; cb(); }; }
-                    i.getElementsByTagName("head")[0].appendChild(s);
-                };
-            }
-            vsl(l + 'loader.min.js', function () { if (!vli) { var vlc = v[c][vl]; vli = new vlc(); } vli.loadScript(l + 'player.min.js', function () { var vec = v[d][ve]; t = new vec(); t.run(a); }); });
-        })(window, document, 'Vidalytics', 'vidalytics_embed_TrmmVnyHPidbbLS9', 'https://fast.vidalytics.com/embeds/AJ0OE7px/TrmmVnyHPidbbLS9/');
-    </script>
-    <!-- Video script end -->
 </body>
 
 </html>

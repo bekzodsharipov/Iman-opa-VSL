@@ -3218,7 +3218,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   cards.forEach((card) => {
     const playBtn = card.querySelector(".results__images");
-    const videoUrl = card.dataset.video;  // 👈 MUHIM: data-video
+    const videoUrl = card.dataset.video;  
 
     if (!playBtn || !videoUrl) return;
 
@@ -3237,7 +3237,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const videoWrapper = document.createElement("div");
       videoWrapper.className = "results__video";
 
-      const src = `${videoUrl}?autoplay=1&rel=0`; // tayyor embed URL
+      const src = `${videoUrl}?autoplay=1&rel=0`;
 
       videoWrapper.innerHTML = `
         <iframe 
