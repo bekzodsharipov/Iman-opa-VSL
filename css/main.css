@@ -547,14 +547,14 @@ button {
 .coments__infos {
     background-color: white;
     border-radius: 50px;
-    padding: 6px;
+    padding: 18px;
     max-width: 230px;
     width: 100%;
     height: 26px;
     margin: 0 auto;
     z-index: 12;
     position: absolute;
-    bottom: 20px;
+    bottom: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -789,6 +789,6 @@ button {
     font-family: Involve, sans-serif;
     font-weight: 500;
     font-size: 14px;
-    line-height: 100%;
+    line-height: 150%;
     text-align: center;
 }
