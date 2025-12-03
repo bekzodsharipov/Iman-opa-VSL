@@ -166,7 +166,7 @@
             color: white;
             font-family: Impact;
             font-weight: 400;
-            font-size: clamp(24px, 6vw, 30px);
+            font-size: clamp(22px, 7vw, 30px);
             line-height: 130%;
             text-transform: uppercase;
             margin-bottom: 15px;
@@ -266,7 +266,7 @@
             transition: 0.3s;
             box-shadow: 0px 5px 0px 0px #683CB9;
             font-weight: 700;
-            font-size: 26px;
+            font-size: clamp(22px, 7vw, 26px);
             line-height: 150%;
             color: white;
             border: none;
@@ -275,7 +275,7 @@
             align-items: center;
             justify-content: center;
             font-family: Involve, sans-serif;
-            padding: 18px 55px;
+            padding: 18px clamp(21px, 7vw, 55px);
             transition: all 0.3s;
             cursor: pointer;
             position: relative;
@@ -366,23 +366,14 @@
         }
 
         @media (max-width:440px) {
-            .HomeFormBtn {
-                font-size: 18px;
-                border-radius: 30px;
-            }
+          
             #registrationForm2 {
                 padding: 15px 20px;
             }
         }
 
         @media (max-width:360px) {
-            .HomeFormBtn {
-                font-size: 22px;
-                border-radius: 20px;
-                padding: 20px;
-                max-width: 250px;
-                width: 100%;
-            }
+          
         }
 
         wistia-player[media-id='j7be7sraqg']:not(:defined) {
@@ -506,7 +497,7 @@
     <section class="teacher section">
         <div class="container teacher__container">
             <h2 class="title">Ustozingiz kim?</h2>
-            <img src="./images/teacher/teacher-name.avif" loading="lazy" alt="teacher name">
+            <img class="teacher__images" src="./images/teacher/teacher-name.avif" loading="lazy" alt="teacher name">
 
             <div class="teacher__center">
                 <img src="./images/teacher/speaker.avif" class="teacher__center__img" decoding="async" loading="lazy"
@@ -546,7 +537,7 @@
     <!-- course start -->
     <section class="course section">
         <div class="container">
-            <h2 class="title">Kursda nimalarni o'rganasiz?</h2>
+            <h2 class="title" style="padding-top: 10px;">Kursda nimalarni o'rganasiz?</h2>
 
             <div class="course__col">
                 <div class="course__col__card">
@@ -659,56 +650,56 @@
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/4.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">Avtomashina xarid qilganlar</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/5.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">Baxtli turmush qurganlar</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/6.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">Yangi uy olganlar</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/7.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">Munosabatlarini yaxshilaganlar</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/8.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">O’zining yarmini topganlar</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/9.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">Qarzidan qutulganlar</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/10.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">Avtomashina xarid qilganlar</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/11.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">Farzandli bo’lganlar</p>
                         </div>
                     </div>
 
@@ -716,7 +707,7 @@
                         <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/12.avif"
                             alt="comment" class="coments__img">
                         <div class="coments__info">
-                            <p class="coments__info__title">Daromadi oshganlar</p>
+                            <p class="coments__info__title">Avtomashina xarid qilganlar</p>
                         </div>
                     </div>
                 </div>
@@ -734,7 +725,7 @@
 
     <section class="results">
         <div class="results__container container">
-            <h2 class="title" style="margin-bottom: 25px; white-space: nowrap;">Real video natijalar</h2>
+            <h2 class="title" style="margin-bottom: 25px; white-space: nowrap; padding-top: 0px;">Real video natijalar</h2>
 
             <div class="results__row">
 
@@ -826,6 +817,8 @@
                 </div>
                 <div class="HomeFormRow mb-3">
                     <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz</label>
+
+
                     <div class="phone-input-container">
                         <div class="country-selector">
                             <div class="selected-country" id="selectedCountry" style=" border-radius: 10px">
@@ -841,6 +834,10 @@
                         <input class="HomeFormRowInput tel" type="tel" id="phone" name="phone"
                             placeholder="+998 88 888 88 88" style="border-radius: 10px" />
                     </div>
+
+
+                   
+
                     <p class="homeFormErrorText" id="phoneError" style="display: none">
                         ❌ Telefon raqam mos emas!
                     </p>

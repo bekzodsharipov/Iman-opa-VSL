@@ -53,10 +53,13 @@ button {
 }
 
 .title {
-    font: 400 32px/130% Impact, sans-serif;
+    font-family: Impact, sans-serif;
+    font-weight: 130%;
+    font-weight: 400;
+    font-size: clamp(24px, 5vw, 32px);
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 43px;
+    margin-bottom: 14px;
     padding-top: 45px;
     color: white;
 }
@@ -85,7 +88,9 @@ button {
     text-transform: uppercase;
     margin-bottom: 8px;
 }
-
+.teacher__images {
+    max-width: clamp(320px, 15vw, 427px);
+}
 .teacher__short_info_text span {
     color: #2f72f5;
 }
@@ -161,7 +166,7 @@ button {
 .course__col {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 32px;
     margin-bottom: 15px;
 }
 
@@ -170,7 +175,8 @@ button {
     border: 1px solid #2f72f5;
     box-shadow: 0px 4px 25px 0px #2f72f540;
     border-radius: 10px;
-    padding: 13px;
+    padding: 10px;
+    max-width: 350px;
 }
 
 .course__col__card__img {
@@ -202,7 +208,7 @@ button {
 .course__col__card__list__item {
     font-family: Involve, sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 130%;
     list-style: none;
 }
@@ -664,19 +670,25 @@ button {
         color: #a3a3a3;
     }
 
-    .teacher__center {
-        flex-wrap: wrap;
-    }
+
 
     .teacher__center__img {
-        max-width: 250px;
+        max-width: 150px;
         width: 100%;
     }
 
-    .title {
-        font-size: 26px;
-        margin-left: 20px;
+    .teacher__center__title {
+        font-size: 17px;
     }
+
+    .teacher__center__text {
+        font-size: 10px;
+    }
+
+    .teacher__center__item {
+        padding: 10px;
+    }
+
 
     .titles {
         font-size: 26px;
@@ -739,6 +751,9 @@ button {
         flex-direction: column;
         margin-bottom: 40px;
     }
+    .teacher__center {
+        flex-wrap: wrap;
+    }
 }
 
 @media(max-width: 335px) {
@@ -755,13 +770,16 @@ button {
     }
 
     .course__col__card__list__item {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .titles {
         font-size: 28px;
     }
-
+    .teacher__center__img {
+        max-width: 200px;
+        height: 300px;
+    }
 }
 
 .coments__img {
