@@ -138,12 +138,13 @@ button {
     margin-bottom: 10px;
     font-weight: 400;
     font-size: 14px;
-    line-height: 100%;
+    line-height: 150%;
 }
 
 .teacher__center__img {
     max-width: 172px;
     width: 100%;
+    object-fit: cover;
 }
 
 .gradients__box {
@@ -161,6 +162,11 @@ button {
     position: absolute;
     z-index: 0;
     top: 100px;
+}
+.wrapper__img {
+    height: clamp(180px, 6vw, 220px);
+    max-width: 373px;
+    width: 100%;
 }
 
 .course__col {
@@ -673,7 +679,7 @@ button {
 
 
     .teacher__center__img {
-        max-width: 150px;
+        max-width: 162px;
         width: 100%;
     }
 
@@ -693,6 +699,12 @@ button {
     .titles {
         font-size: 26px;
         margin-left: 20px;
+    }
+    .teacher__center {
+        gap: 10px;
+    }
+    .teacher__center__box {
+        gap: 10px;
     }
 }
 
@@ -778,7 +790,6 @@ button {
     }
     .teacher__center__img {
         max-width: 200px;
-        height: 300px;
     }
 }
 

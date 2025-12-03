@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iman opa VSL</title>
+    <title>Iman VSL</title>
     <style>
         * {
             margin: 0;
@@ -266,7 +266,7 @@
             transition: 0.3s;
             box-shadow: 0px 5px 0px 0px #683CB9;
             font-weight: 700;
-            font-size: clamp(22px, 7vw, 26px);
+            font-size: clamp(22px, 6vw, 26px);
             line-height: 150%;
             color: white;
             border: none;
@@ -275,7 +275,7 @@
             align-items: center;
             justify-content: center;
             font-family: Involve, sans-serif;
-            padding: 18px clamp(21px, 7vw, 55px);
+            padding: 18px clamp(20px, 6vw, 55px);
             transition: all 0.3s;
             cursor: pointer;
             position: relative;
@@ -366,15 +366,13 @@
         }
 
         @media (max-width:440px) {
-          
+
             #registrationForm2 {
                 padding: 15px 20px;
             }
         }
 
-        @media (max-width:360px) {
-          
-        }
+        @media (max-width:360px) {}
 
         wistia-player[media-id='j7be7sraqg']:not(:defined) {
             background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/j7be7sraqg/swatch');
@@ -426,21 +424,22 @@
                 <h3 class="hero__top__title">iman <br>
                     ahmedova</h3>
 
-
                 <p class="hero__top__text">Yillab olgan bilimlarimni 3 kunlik vebinarimda bo’lishaman</p>
             </div>
             <h1 class="VSL_title">3 oyda <span>istalgan orzuyingizga</span> “Niyatlar ilmi” bilan erishing</h1>
 
 
 
-            <style>
-                wistia-player[media-id='aquxo4cfrv']:not(:defined) {
-                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/aquxo4cfrv/swatch');
-                    display: block;
-                    filter: blur(5px);
-                    padding-top: 56.25%;
-                }
-            </style> <wistia-player media-id="aquxo4cfrv" aspect="1.7777777777777777"></wistia-player>
+            <div class="wrapper__img">
+                <style>
+                    wistia-player[media-id='aquxo4cfrv']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/aquxo4cfrv/swatch');
+                        display: block;
+                        filter: blur(5px);
+                        padding-top: 56.25%;
+                    }
+                </style> <wistia-player media-id="aquxo4cfrv" aspect="1.7777777777777777"></wistia-player>
+            </div>
 
 
             <img src="./images/hero/arrows.avif" alt="kompaniya logosi" width="48" height="84" loading="lazy"
@@ -725,12 +724,13 @@
 
     <section class="results">
         <div class="results__container container">
-            <h2 class="title" style="margin-bottom: 25px; white-space: nowrap; padding-top: 0px;">Real video natijalar</h2>
+            <h2 class="title" style="margin-bottom: 25px; white-space: nowrap; padding-top: 0px;">Real video natijalar
+            </h2>
 
             <div class="results__row">
 
 
-                <div class="results__col" >
+                <div class="results__col">
                     <wistia-player media-id="llf8mh1tgp" aspect="0.5743048897411314"></wistia-player>
 
                     <div class="results__images">
@@ -743,7 +743,7 @@
                 </div>
 
                 <!-- 2-video -->
-                <div class="results__col" >
+                <div class="results__col">
                     <wistia-player media-id="j7be7sraqg" aspect="0.5743048897411314"></wistia-player>
 
                     <div class="results__images">
@@ -755,7 +755,7 @@
                 </div>
 
                 <!-- 3-video -->
-                <div class="results__col" >
+                <div class="results__col">
                     <wistia-player media-id="38e438bewp" aspect="0.5743048897411314"></wistia-player>
 
                     <div class="results__images">
@@ -836,7 +836,7 @@
                     </div>
 
 
-                   
+
 
                     <p class="homeFormErrorText" id="phoneError" style="display: none">
                         ❌ Telefon raqam mos emas!

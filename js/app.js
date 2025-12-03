@@ -127,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateTimer, 1000);
 });
 
+
 document.addEventListener("DOMContentLoaded", (function () {
   const e = document.getElementById("registrationForm2")
     , t = document.getElementById("name2")
