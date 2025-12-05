@@ -2,6 +2,262 @@ document.addEventListener("DOMContentLoaded", function () {
   const lazyHTML = document.querySelector(".lazyHTML");
   if (lazyHTML) {
     lazyHTML.innerHTML = `
+        <!-- course start -->
+    <section class="course section">
+        <div class="container">
+            <h2 class="title" style="padding-top: 10px;">Kursda nimalarni o'rganasiz?</h2>
+
+            <div class="course__col">
+                <div class="course__col__card">
+                    <img loading="lazy" decoding="async" src="./images/course/after.avif" alt="course__img"
+                        class="course__col__card__img">
+                    <h3 class="course__col__card__title">Oldingi siz:</h3>
+                    <ul class="course__col__card__list">
+                        <li class="course__col__card__list__item">Tinimsiz duolar, ibodatlar qilasiz lekin <span>natija
+                                yo’q</span></li>
+                        <li class="course__col__card__list__item">Maqsadlariz, <span>ibodatlaringizga dangasasiz</span>,
+                            <br> bir ishni ohirigacha yetkaza olmaysiz
+                        </li>
+                        <li class="course__col__card__list__item">Muammoni hal qilish uchun kurslar, <br> kitoblar
+                            o’qiysiz <span>natijalar esa vaqtinchalik</span>
+                        </li>
+                        <li class="course__col__card__list__item">Doimiy <span>yomon hayollardan qiynalasiz,</span> <br>
+                            o’zingizga nisbatan ishonchingiz past</li>
+                    </ul>
+                </div>
+                <div class="course__col__card">
+                    <img loading="lazy" decoding="async" src="./images/course/before.avif" alt="course__img"
+                        class="course__col__card__img">
+                    <h3 class="course__col__card__title">Kursdan keyingi siz:</h3>
+                    <ul class="course__col__card__list">
+                        <li class="course__col__card__list__item">Istalgan duolaringiz <span>tez va oson</span> ijobat
+                            bo’ladi</li>
+                        <li class="course__col__card__list__item">Har qanday <span>ishni bosimsiz,</span> dangasaliksiz
+                            <br> qilasiz va ohirigacha yetkazasiz
+                        </li>
+                        <li class="course__col__card__list__item">Siz xohlagan <span>munosabat</span> va
+                            <span>puldagi</span> <br> natijalar davomiy bo’ladi
+                        </li>
+                        <li class="course__col__card__list__item">Yomon hayollarsiz, <span>huzur halovatda</span> <br>
+                            hotirjam yashaysiz</li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- course end -->
+
+    <!-- coments start -->
+    <section class="section">
+        <div class="all_results__container container">
+            <div class="all__results__box">
+                <h2 class="titles" style="margin-bottom: 20px; white-space: nowrap;">O'quvchilarim fikrlari</h2>
+                <div class="swiper_buttons container">
+                    <div class="swiper-button-prev3 swiper-button">
+                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect x="7" y="10.4412" width="7" height="9.88235" transform="rotate(180 7 10.4412)"
+                                fill="url(#pattern0_38_34)" />
+                            <defs>
+                                <pattern id="pattern0_38_34" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_38_34"
+                                        transform="translate(-0.176471) scale(0.00551471 0.00390625)" />
+                                </pattern>
+                                <image id="image0_38_34" width="256" height="256" preserveAspectRatio="none"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg>
+
+                    </div>
+                    <div class="swiper-button-next3 swiper-button">
+                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect y="0.558838" width="7" height="9.88235" fill="url(#pattern0_38_36)" />
+                            <defs>
+                                <pattern id="pattern0_38_36" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_38_36"
+                                        transform="translate(-0.176471) scale(0.00551471 0.00390625)" />
+                                </pattern>
+                                <image id="image0_38_36" width="256" height="256" preserveAspectRatio="none"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAACZlJREFUeJzt3c+LnWcZxvHrSdJINC1WK2JBY6lZSrWiG3VRutBFDLpxI24MKG5cuHKh1eqm3Yi4EH/VXREENzZKQA1CcdEuhG4EQaq0RW2oYqDWhmouF3MmTiZnZs6P53nv572f7+cvuE+Y63veMzNJirCU7TOSPibpI5LukfRWSXdIuiLpBUnPSHpC0uVSyr+j7gRQke37bV/y6q7afsj26ejbAWzI9inbP7J9fY3x7/Wi7fPRrwPAmmzfbfupDYe/13Xbj9gu0a8JwAps32v7uQrj3+u7RADonO0ztv9Uefy7fmj7WPRrBLBE4/ETAaBXE42fCAC9sf3OCcdPBIBeBI2fCADRgse/iwgAU3Mf499FBICp2H677eeDR78fvycAtOadX+99OnjsB+FJAGjJ9uPRKz8CTwIIlfaLz/aHJD0ZfccKHpP02VLK9ehDMJ7Mj6DfiD5gRRckfd98HECAlE8Att8r6XfRd6zpe5I+X0px9CEYR9Z3nTn+vfzPSfoBTwKYUtYvto9GH7ChC5K+wzcGMZWsATgbfcAWeBLAZNK909g+KelVzf+18dMBNJfxXeZ2zX/8Eh8HMIF0X1yLR+drkk5E31IJTwJoJt0TwGIoV6LvqIjfE0AzWb+onok+oDI+DqCJrAH4efQBDfDTAVSX8h3F9jskPSvpePQtDfAbg6gm5btJKeU5SY9H39EITwKoJuUTgLTzrwBJ+oOkk8GntMJPB7C1tO8ipZQ/S/py9B0N8Y1BbC39F4/txyR9JvqOhngSwMZGCMAp7fxU4IHoWxriG4PYSPoASJLt10v6maQHo29piCcBrG2IAEhEAFhmmABIRADYb6gASEQA2Gu4AEhEANg1ZAAkIgBIAwdAIgLA0AGQiADGNnwAJCKAcRGABSKAERGAPYgARkMA9iECGAkBWIIIYBQE4ABEACMgAIcgAsiOAByBCCAzArACIoCsCMCKiAAyIgBrIALIhgCsiQggEwKwASKALAjAhogAMiAAWyACmDsCsCUigDkjABUQAcwVAaiECGCOCEBFRABzQwAqIwKYEwLQABHAXBCARogA5oAANEQE0DsC0BgRQM8IwASIAHpFACZCBNAjAjAhIoDeEICJEQH0hAAEIALoBQEIQgTQAwIQiAggGgEIRgQQiQB0gAggCgHoBBFABALQESKAqRGAzhABTIkAdIgIYCoEoFNEAFMgAB0jAmiNAHSOCKAlAjADRACtEICZIAJogQDMCBFAbQRgZogAaiIAM0QEUAsBmCkigBoIwIwRAWyLAMwcEcA2CEACRACbIgBJEAFsggAkQgSwLgKQDBHAOghAQkQAqyIASREBrIIAJEYEcBQCkBwRwGEIwACIAA5CAAZBBLAMARgIEcB+BGAwRAB7EYABEQHsIgCDIgKQCMDQiAAIwOCIwNgIAIjAwAgAJBGBUREA3EAExkMAcBMiMBYCgFsQgXEQACxFBMZAAHAgIpAfAcChiEBuBABHIgJ5EQCshAjkRACwMiKQDwHAWohALgQAayMCeRyLPgDzU0p5RdJ5Sb+OvqWhC5K+Hn1EazwBYGMDPAlY0qdKKT+OPqQVAoCtLCJwUdID0bc08rKks6WUv0Uf0gIfAbCVxceBc8r7ceC0pK9EH9EKTwCoIvmTwGuS7i2lPB99SG08AaCK5E8Ct0n6RPQRLRAAVJP8pwPnog9ogY8AqC7px4F/lVJORx9RG08AqC7px4E32L4j+ojaCACa2PNx4DfBp9R0d/QBtREAtPQ6SbdHH1HRf6IPqI0AoAnbd0r6paT3Rd9SUbpfBjoRfQDysX2XpF9Jui/6loqullJejj6iNp4AUNXinf+Sco1fyvW9jBsIAKpJ+ti/62L0AS3wewCoIulj/65XJN1TSrkSfUhtPAFga4kf+3d9K+P4JZ4AsKXk7/yS9JJ2/jrwP6MPaYEnAGxsgHf+/0r6dNbxS/wYEBsa4J1fkr5YSrkUfURLPAFgbQO880vSo6WUb0cf0RrfA8Bakv+ob9ejpZQvRR8xBQKAlTH+fAgAVsL4cyIAOBLjz4sA4FCMPzcCgAMx/vwIAJZi/GMgALgF4x8HAcBNGP9YCABuYPzjIQCQxPhHRQDA+AdGAAbH+MdGAAbG+EEABsX4IRGAITF+7CIAg2H82IsADITxYz8CMAjGj2UIwAAYPw5CAJJj/DgMAUiM8eMoBCApxo9VEICEGD9WRQCSYfxYBwFIhPFjXQQgCcaPTRCABBg/NsV/Djpzg4z/a4y/DZ4AZmyg8T8cfURWBGCmGD9qIAAzxPhRCwGYGcaPmgjAjDB+1EYAZoLxowUCMAOMH60QgM4xfrREADrG+NEaAegU48cUCECHGD+mQgA6w/gxJQLQEcaPqRGATjB+RCAAHWD8iEIAgjF+RCIAgRg/ohGAIIwfPSAAARg/ekEAJsb40RMCMCHGj94QgIkwfvSIAEyA8aNXBKAxxo+eEYCGGD96RwAaYfyYAwLQAOPHXBCAyhg/5oQAVMT4MTcEoBLGjzkiABUwfswVAdgS48ecEYAtMH7MHQHYEONHBgRgA4wfWRCANTF+ZEIA1sD4kQ0BWBHjR0YEYAWMH1kRgCMwfmRGAA7B+JEdATgA48cICMASjB+jIAD7MH6MhADswfgxGgKwwPgxIgIgxo9xDR8Axo+RDR0Axo/RDRsAxg8MGgDGD+wYLgCMH/i/oQLA+IGbDRMAxg/caogAMH5gufQBsP0mSZcl3Rd9S0OMHxs5Fn1AS7ZPSPqJGD+wVOoASPqmpAejj2iI8WMraT8C2H6/pKeU9zUyfmwt8xPAI2L8wKFSDsT2B7Tz7p8R40c1WZ8APh59QCOMH1VlDcC56AMaYPyoLt1HANvHJV2TdDz6looYP5rI+ATwFjF+YCUZA3BX9AEVMX40lTEAV6MPqITxo7mM3wO4TdKrmnfcGD8mMeeRLFVKeU3SC9F3bIHxYzLpArDwi+gDNsT4MamsAXgi+oANMH6gBtvHbf/e8/HV6D8zIBXbn4xe9YoYP1Cb7WL7cvS6j8D4gVZsv9n2H6NXfgDGD7Rm+922/xG99n0YPzAV2++x/VL06hcYPzA19xEBxg9ECY4A4weiBUWA8QO9mDgCjB/ozUQRYPxArxpHgPEDvbN9v+2/Vx7/Q9GvC8CKbL/Ldf7y0DXbF6JfD4A12X6j7Z9uMf5nbX8w+nUA2ILtD9v+7RrDf9H2F2yfjL4dWFe6fxOwFttnJZ3Xzv8ufEbS2ySdkvRXSX+R9LSki5KeXPwzZMDs/A9kKo9f2CARzwAAAABJRU5ErkJggg==" />
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper" style="margin-bottom: 38px;">
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/1.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/2.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/3.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Daromadi oshganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/4.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Avtomashina xarid qilganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/5.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Baxtli turmush qurganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/6.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Yangi uy olganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/7.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Munosabatlarini yaxshilaganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/8.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">O’zining yarmini topganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/9.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Qarzidan qutulganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/10.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Avtomashina xarid qilganlar</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/11.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Farzandli bo’lganlar</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img loading="lazy" decoding="async" width="290" height="432" src="./images/comments/12.avif"
+                            alt="comment" class="coments__img">
+                        <div class="coments__info">
+                            <p class="coments__info__title">Avtomashina xarid qilganlar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="HomeFormBtn registerBtns">
+                    Kursga qatnashish
+                </button>
+
+            </div>
+        </div>
+    </section>
+    <!-- coments end -->
+
+    <!-- Vidio start -->
+
+    <section class="results">
+        <div class="results__container container">
+            <h2 class="title" style="margin-bottom: 25px; white-space: nowrap; padding-top: 0px;">Real video natijalar
+            </h2>
+
+            <div class="results__row">
+
+
+                <div class="results__col">
+                    <wistia-player media-id="llf8mh1tgp" aspect="0.5743048897411314"></wistia-player>
+
+                    <div class="results__images">
+                        <img src="./images/play.png" loading="lazy" alt="play icon">
+                    </div>
+
+                    <div class="coments__infos">
+                        <p class="coments__info__title">21 kunda yangi uylik bo’lganlar</p>
+                    </div>
+                </div>
+
+                <!-- 2-video -->
+                <div class="results__col">
+                    <wistia-player media-id="j7be7sraqg" aspect="0.5743048897411314"></wistia-player>
+
+                    <div class="results__images">
+                        <img src="./images/play.png" loading="lazy" alt="play icon">
+                    </div>
+                    <div class="coments__infos">
+                        <p class="coments__info__title">Dardlariga shifo topganlar</p>
+                    </div>
+                </div>
+
+                <!-- 3-video -->
+                <div class="results__col">
+                    <wistia-player media-id="38e438bewp" aspect="0.5743048897411314"></wistia-player>
+
+                    <div class="results__images">
+                        <img src="./images/play.png" loading="lazy" alt="play icon">
+                    </div>
+
+                    <div class="coments__infos">
+                        <p class="coments__info__title" style="font-size: 11px; padding: 6px;">Novostroykadan 10 yil
+                            kutilgan uylarini qisqa muddatda oldilar</p>
+                    </div>
+                </div>
+
+                <!-- 4-video -->
+                <div class="results__col">
+                    <wistia-player media-id="d1b4y62mjr" aspect="0.5743048897411314"></wistia-player>
+
+                    <div class="results__images">
+                        <img src="./images/play.png" loading="lazy" alt="play icon">
+                    </div>
+
+                    <div class="coments__infos">
+                        <p class="coments__info__title" style="font-size: 11px; ">Qarzlaridan 100% qutilgan
+                            va turmush o’rtog’i bilan yarashganlar</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="HomeFormBtn registerBtns" style="margin-top: 30px;">
+                Kursga qatnashish
+            </button>
+        </div>
+    </section>
     `;
   }
 
@@ -3129,7 +3385,8 @@ document.addEventListener("DOMContentLoaded", (function () {
           const t = document.createElement("div");
           t.className = "country-option",
             e.code === s && t.classList.add("selected"),
-            t.innerHTML = `\n                <span>${e.name}</span>\n                <span class="country-code">${e.code}</span>\n                ${e.code === s ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' : ""}\n            `,
+            t.innerHTML = `\n                <span>${e.name}</span>\n                <span class="country-code">${e.code}</span>\n    
+                        ${e.code === s ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' : ""}\n            `,
             t.addEventListener("click", (function () {
               u(e)
             }

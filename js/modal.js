@@ -2927,14 +2927,14 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   let p = "+998";
   function v(e) {
-    (p = e.code),
-      (m.textContent = `${e.name.split(" ")[0]}`),
-      (s.style.display = "none");
+    p = e.code;
+    m.textContent = e.code;
+    s.style.display = "none";
     const t = M[e.code] || M["+998"];
-    (h.placeholder = t.placeholder),
-      (h.value = p + " "),
-      (r.style.display = "none"),
-      (u.innerHTML = '<polyline points="6 9 12 15 18 9"></polyline>');
+    h.placeholder = t.placeholder;
+    h.value = p + " ";
+    r.style.display = "none";
+    u.innerHTML = '<polyline points="6 9 12 15 18 9"></polyline>';
   }
   function $() {
     (t.style.display = "none"),
